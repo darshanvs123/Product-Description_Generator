@@ -1,0 +1,20 @@
+<html>
+<head>
+    <title>Product Description Generator</title>
+</head>
+<body>
+    <h1>Welcome to Product Description Generator</h1>
+    <p>Generate Product Description for your products instantly!</p>
+    <form method="post" action="{% url 'generate_description' %}">
+        {% csrf_token %}
+        <label for="product_name">Product Name:</label>
+        <input type="text" name="product_name" placeholder="Nike Shoes">
+        <br>
+        <label for="keywords">Keywords (separated by commas):</label>
+        <input type="text" name="keywords" placeholder="black shoes, leather shoes for men, water-resistant">
+        <br>
+        <input type="submit" value="Generate Description">
+        
+    </form>
+</body>
+</html>
